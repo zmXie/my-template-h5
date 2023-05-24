@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script type = "text/javascript" src="<%= VUE_APP_CXO_SRC %>web-apps/apps/api/documents/api.js"></script>
+    <script type="text/javascript" src="//default.mediportal.com.cn/cdn/vconsole/3.3.4/vconsole.min.js"></script>
+    <script>
+      // 测试环境开启调试
+      if (location.origin.search(/test-m.szyun.info/g) !== -1) {
+        new window.VConsole();
+      }
+    </script>
+  </body>
+</html>

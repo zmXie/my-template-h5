@@ -1,0 +1,50 @@
+@import 'public';
+
+// 补丁 base
+@import '~@/assets/style/fixed/base.scss';
+// 统一浏览器样式
+@import '~@/assets/style/fixed/normalize.scss';
+
+@import './flex.scss';
+
+// 在这里写公用的class
+// 注意 这个文件里只写class
+// mixin等内容请在 public.scss 里书写
+
+.line1 {
+  @include multiline(1);
+}
+
+.line2 {
+  @include multiline(2);
+}
+
+.color-666 {
+  color: #666;
+}
+
+.color-999 {
+  color: #999;
+}
+
+.bottom-line {
+  position: relative;
+  @extend %bottom-line;
+}
+
+.flex-tabs {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .van-tabs__wrap {
+    position: relative;
+    flex-shrink: 0;
+    @extend %bottom-line;
+  }
+  .van-tabs__content,
+  .van-tab__pane {
+    height: 100%;
+    overflow: hidden;
+  }
+}
