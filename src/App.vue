@@ -10,15 +10,13 @@
         <!-- 这里是不被缓存的视图组件，比如 Edit！ -->
       </router-view>
     </transition>
-    <doc-online></doc-online>
   </div>
 </template>
 <script>
-import docOnline from '@/views/system/doc-online'
 export default {
   name: 'app',
   components: {
-    docOnline
+
   },
   async created() {
     // 从数据库取用户信息
